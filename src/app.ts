@@ -1,5 +1,20 @@
-console.log("Gabriel Neves")
-console.log("Teste!!!!!!")
-// console.log("Teste")
+import * as express from 'express';
 
-// let a: string = "Teste";
+class App {
+  public express: express.Application;
+
+  constructor() {
+    this.express = express();
+    this.middleware();
+  }
+
+  private middleware(): void {
+    this.express.use('/hello', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+      res.send({
+        hello: "Hello World HASHAHS"
+      });
+    })
+  }
+}
+
+export default new App().express;
