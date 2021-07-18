@@ -30,9 +30,12 @@ gulp.task("watch", ["build"], () => {
 
 gulp.task('default', ['watch'], () => {
   nodemon({
-       script: 'dist/index',
-       ext: 'js'
-     }).on('restart', function(){
-          return gulp.task('default', ['default']);
-     });
+    script: 'dist/index',
+    env: {
+      NODE_ENV: 'development'
+    },
+    ext: 'js'
+  }).on('restart', function(){
+    return gulp.task('default', ['default']);
+  });
  });
