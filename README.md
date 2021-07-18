@@ -5,4 +5,4 @@
 `node_modules/.bin/gulp`
 
 ## Rodar a aplicação (Atualiza o servidor automáticamente)
-`npm run gulp`
+`npm run dev`
