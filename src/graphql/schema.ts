@@ -48,6 +48,12 @@ const typeDefs = `
 `;
 
 const resolvers = {
+  // Resolver Trivial
+  // User: {
+  //   id: (user) => user.id,
+  //   name: (user) => user.name,
+  //   email: (user) => user.email,
+  // },
   Query: {
     allUsers: () => users
   },
